@@ -2,9 +2,9 @@
 
 input_file="${input_file:-/tmp/jenkins/workspace/run_ssa/label/dev-r-vrt-030/nodes.list}"
 
-hostname_file="${/tmp/hostnames.list}"
+hostname_file="${hostname_file:-/tmp/hostnames.list}"
 
-output_file="${/etc/rdma/ibssa_hosts.data}"
+output_file="${output_file:-/etc/rdma/ibssa_hosts.data}"
 
 cat $input_file | awk '{print $1}' > $hostname_file
 
